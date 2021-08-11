@@ -11,7 +11,9 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('$hello'):
-        await message.channel.send('Hello!')
+    if message.content.startswith('ch.in'):
+        login_user = message.author
+        await message.channel.send(login_user + ' has logged in.')
 
+#Need to create a .env file and environment variable for token for security
 client.run('ODcxOTE3OTg4NjM3NDYyNTQ4.YQiS5w.dRJ54g6dzmQY-dJcGuus984c2A0')
