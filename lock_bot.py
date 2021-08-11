@@ -10,6 +10,9 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
+   
+    if message.content.startswith('ch.help'):
+        help_menu()
 
     if message.content.startswith('ch.in'):
         login_user = message.author
@@ -18,7 +21,7 @@ async def on_message(message):
         await message.channel.send(login_user_mention + ': test to see if this creates a mention.')
 
 
-def help_menu():
+async def help_menu():
    await message.channel.send('Hello organic! I am B-4R5-GE3, tasked with maintaining control of the CTR account. Please see below for a list of my functionality\n.')
    await message.channel.send('ch.in - logs user as current pilot for CTR account')
 
