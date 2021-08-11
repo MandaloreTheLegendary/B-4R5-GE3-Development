@@ -1,4 +1,5 @@
 import discord
+import os
 
 client = discord.Client()
 
@@ -26,4 +27,5 @@ async def help_menu():
    await message.channel.send('ch.in - logs user as current pilot for CTR account')
 
 #Need to create a .env file and environment variable for token for security
-client.run('ODcxOTE3OTg4NjM3NDYyNTQ4.YQiS5w.dRJ54g6dzmQY-dJcGuus984c2A0')
+#client.run('ODcxOTE3OTg4NjM3NDYyNTQ4.YQiS5w.dRJ54g6dzmQY-dJcGuus984c2A0')
+client.run(os.getenv('BOT_TOKEN'))
